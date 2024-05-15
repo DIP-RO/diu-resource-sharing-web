@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import Student , Department,BookSubmission
+from .models import Student , Department,BookSubmission,Resource
 # Register your models here.
 @admin.register(Student)
 class StudentAdmin(admin.ModelAdmin):
@@ -10,3 +10,6 @@ class DepartmentAdmin(admin.ModelAdmin):
 @admin.register(BookSubmission)
 class BookSubmissionAdmin(admin.ModelAdmin):
     list_display = ['id','title','department','author','edition','subject','description','img']
+@admin.register(Resource)
+class ResourceAdmin(admin.ModelAdmin):
+    fields = [ 'id','title','department', 'teacher', 'course', 'resource_type', 'file']

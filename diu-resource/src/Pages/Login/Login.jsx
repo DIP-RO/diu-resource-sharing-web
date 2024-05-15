@@ -2,7 +2,7 @@ import { useState } from "react";
 import { useContext } from "react";
 import Swal from "sweetalert2";
 import { AuthContext } from "../../Context/UserContext";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 const Login = () => {
   const navigate = useNavigate();
   const { signIn } = useContext(AuthContext);
@@ -78,7 +78,7 @@ const Login = () => {
                 <div className="welcome-text">
                   <h3>We're glad to see you again!</h3>
                   <span>
-                    Don't have an account? <a href="register.html">Sign Up!</a>
+                    Don't have an account? <Link to="/signup">Sign Up!</Link>
                   </span>
                 </div>
 
