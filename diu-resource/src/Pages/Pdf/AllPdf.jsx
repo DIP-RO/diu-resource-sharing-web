@@ -5,9 +5,8 @@ const AllPdf = () => {
   const [resources, setResources] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
-  const [selectedLetter, setSelectedLetter] = useState(null);
+//   const [selectedLetter, setSelectedLetter] = useState(null);
 
-  const [searchQuery, setSearchQuery] = useState("");
   useEffect(() => {
     const fetchResources = async () => {
       try {
@@ -43,11 +42,11 @@ const AllPdf = () => {
     }
   };
 
-  const handleLetterClick = (letter) => {
-    setSelectedLetter(letter);
-    setSearchQuery(""); // Clear search query when a letter is selected
-  };
-
+//   const handleLetterClick = (letter) => {
+//     setSelectedLetter(letter);
+//     setSearchQuery(""); // Clear search query when a letter is selected
+//   };
+<>Loa</>
   return (
     <div>
       <div id="titlebar" className="gradient margin-top-60">
@@ -82,7 +81,7 @@ const AllPdf = () => {
                   <a
                     key={letter}
                     href="#"
-                    onClick={() => handleLetterClick(letter)}
+                    // onClick={() => handleLetterClick(letter)}
                   >
                     {letter}
                   </a>
